@@ -7,7 +7,7 @@ class Product:
         self.discount = discount
 
     def get_product_description(self):
-        return f"{self.name}/{self.color}: {self.price} | {self.amount}\Discount: {self.get_price()}"
+        return f"{self.name}/{self.color}:{self.price}|{self.amount}\Discount:{self.get_price()}"
 
     def show_description(self):
         print(f"Description: {self.get_product_description()}")
@@ -19,7 +19,6 @@ class Product:
 
 class Phone(Product):
     def __init__(self, name, color, price, amount, lte=False, discount=False):
-        # Product.__init__(self, name, color, price, amount)
         super().__init__(name, color, price, amount, discount,)
         self.lte = lte
        
@@ -30,14 +29,6 @@ class Phone(Product):
         message += additional
 
         return message
-
-    # def show_description(self):
-    #     # if self.lte is True:
-    #     #     additional = "LTE"
-    #     # else:
-    #     #     additional = ""
-    #     additional = "LTE" if self.lte else ""
-    #     print(f"Description: {self.name}/{self.color}: {self.price} | {self.amount}, {additional}")
 
 
 class Laptop(Product):
