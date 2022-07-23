@@ -45,10 +45,11 @@ class Laptop(Product):
         super().__init__(name, color, price, amount, discount, )
         self.motherboard_type = motherboard_type
         self.material = material
-    def get_product_description(self):
+    def get_show_details(self):
         return f"{self.name}/{self.color}: {self.price} | {self.amount}\Discount: {self.get_price()} | {self.motherboard_type} / {self.material}"
-        
-
+    
+    def show_details(self):
+        print(f"Description: {self.get_show_details()}")
 
 iphone7 = Phone(name="iPhone 7", color="red", price=700.0, amount=1)
 iphone13 = Phone(name="iPhone 13", color="black", price=2000.0, amount=2, lte=True, discount=0.2)
@@ -57,5 +58,5 @@ lenovo2 = Laptop(name="Lenovo2", color="grey", price=2000.0, amount=1, motherboa
 
 iphone13.show_description()
 iphone7.show_description()
-lenovo.show_description()
-lenovo2.show_description()
+lenovo.show_details()
+lenovo2.show_details()
