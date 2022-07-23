@@ -1,4 +1,3 @@
-
 class Car:
     def __init__(self, name, year, manufacturer, engine, color, price) -> None:
         self.name = name
@@ -11,9 +10,8 @@ class Car:
     def show_details(self):
         print(f"Car name: {self.name}|Price: {self.price}")
         
-    def show_details_full(self):
+    def show_full_details(self):
         print(f"{self.name}/{self.year}: {self.manufacturer} | {self.engine}|{self.color}/{self.price}")
-        
 
 
 class Book:
@@ -27,8 +25,10 @@ class Book:
 
     def details_book(self):
         print(f"book title: {self.title}|Price: {self.price}")
+
     def details_book_full(self):
         print(f"{self.title}/{self.year}: {self.publisher} | {self.genre}|{self.author}/{self.price}")
+
 
 class Stadium:
     def __init__(self, name, date, country, city,) -> None:
@@ -39,12 +39,13 @@ class Stadium:
        
     def details_Stadium(self):
         print(f"football stadium: {self.name}|Country: {self.country}")
+        
     def details_Stadium_full(self):
         print(f"{self.name}/{self.date}: {self.country} | {self.city}")
 
 
 volvo = Car(name="volvo", year = "2012", manufacturer = "Poland", engine = "2.0 TDI", color = "red", price = "20000")
-volvo.show_details_full()
+volvo.show_full_details()
 volvo.show_details()
 
 space = Book(title = "space", year = "1985", publisher = "India",genre = "scientific", author = "shrn", price = "100")
