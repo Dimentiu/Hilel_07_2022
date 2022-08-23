@@ -1,0 +1,31 @@
+{
+    "results": [
+        {
+            "name": "Anna",
+            "age": 24,
+            "equipment": "Synth",
+            "discography": 3,
+            "salary": 3000,
+            "genre": "techno",
+            "male": false
+        },
+        {
+            "name": "Tiesto",
+            "age": 55,
+            "equipment": "Pioneer",
+            "discography": 20,
+            "salary": 30000,
+            "genre": "lite-house",
+            "male": true
+        },
+        {
+            "name": "Avicci",
+            "age": 22,
+            "equipment": "Pioneer",
+            "discography": 40,
+            "salary": 0,
+            "genre": "adm",
+            "male": true
+        }
+    ]
+}
