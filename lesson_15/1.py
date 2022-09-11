@@ -50,45 +50,23 @@ class Rocket:
         print("🚀 Rocket go to the moon...")
 
 
-def main():
-    rockets = [Rocket(name=f"Rocket {i}") for i in range(1, 3)]
+def run_sync_one_thread(rockets):
+    for rocket in rockets:
+        rocket.run()
+
+
+def run_in_threads(rockets):
     threads = [Thread(target=rocket.run) for rocket in rockets]
+
     for thread in threads:
         thread.start()
 
 
-def t_1():
-    for i in range(1,11):
-        print(i)  
+def main():
+    rockets = [Rocket(name=f"Rocket {i}") for i in range(1, 1000000)]
 
-def t_2():
-    x = 0
-    for i in range(1,10001):
-        x += i
-    print(f"T2: {x}")
-
-def t_3():
-    x = 0
-    for i in range(1,10001):
-        x += i
-        y = x/10000
-    print(f"T3: {y}")
-        
-t1 = Thread(target=t_1)
-t2 = Thread(target=t_2)
-t3 = Thread(target=t_3)
-
-t1.start()
-t1.join()
-
-t2.start()
-t2.join()
-
-t3.start()
-t3.join()
-
-
-
+    # run_sync_one_thread(rockets)
+    run_in_threads(rockets)
 
 
 if __name__ == "__main__":
